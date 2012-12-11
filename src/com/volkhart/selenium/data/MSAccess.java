@@ -31,6 +31,9 @@ import java.sql.Statement;
  * @author Marius Volkhart
  */
 public class MSAccess {
+    
+    public static final String TILDE = "~";
+    public static final String PIPE = "|";
 
     private static final String sDataSource = "jdbc:odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=";
 
