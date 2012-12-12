@@ -38,6 +38,7 @@ body {
 }
 .eventExplanation {
 	margin-top: 10px;
+	margin-left: 50px;
 }
 pre {
 	background-color: #282828;
@@ -59,6 +60,7 @@ table {
 	border: none;
 }
 .eventTitle {
+    font-weight: bold;
 }
 .location {
 	color: #bebebe;

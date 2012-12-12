@@ -16,8 +16,8 @@
 
 package com.volkhart.selenium.util;
 
-import com.volkhart.selenium.util.report.Event;
-import com.volkhart.selenium.util.report.Reporter;
+import com.volkhart.selenium.report.Event;
+import com.volkhart.selenium.report.Reporter;
 
 /**
  * @author Marius Volkhart

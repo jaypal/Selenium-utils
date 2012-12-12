@@ -16,9 +16,9 @@
 
 package com.volkhart.selenium.framework;
 
+import com.volkhart.selenium.report.Reporter;
+import com.volkhart.selenium.report.Screenshot;
 import com.volkhart.selenium.util.Window;
-import com.volkhart.selenium.util.report.Reporter;
-import com.volkhart.selenium.util.report.Screenshot;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;

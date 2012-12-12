@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.volkhart.selenium.test.util.report;
+package com.volkhart.selenium.test.report;
 
 import static org.junit.Assert.fail;
 
+import com.volkhart.selenium.report.Reporter;
 import com.volkhart.selenium.util.Verify;
-import com.volkhart.selenium.util.report.Reporter;
 
 import junit.framework.Assert;
 

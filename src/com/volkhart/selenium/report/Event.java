@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.volkhart.selenium.util.report;
+package com.volkhart.selenium.report;
 
 import com.google.common.base.Preconditions;
 

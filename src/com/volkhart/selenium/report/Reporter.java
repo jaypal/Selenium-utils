@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.volkhart.selenium.util.report;
+package com.volkhart.selenium.report;
 
 import com.google.common.io.ByteStreams;
 import com.google.common.io.Closeables;
@@ -289,15 +289,15 @@ public class Reporter {
 
             for (Function function : script.getFunctions()) {
                 mWriter.write("\n<tr>\n<td class=\"functionColumn\">");
-                mWriter.write(Integer.toString(function.getFailureCount()));
+                mWriter.write(formatOverviewInt(function.getFailureCount()));
                 mWriter.write(" <img border=\"0\" align=\"top\" src=\"");
                 mWriter.write(mErrorIconUrl);
                 mWriter.write("\"/> ");
-                mWriter.write(Integer.toString(function.getWarningCount()));
+                mWriter.write(formatOverviewInt(function.getWarningCount()));
                 mWriter.write(" <img border=\"0\" align=\"top\" src=\"");
                 mWriter.write(mWarningIconUrl);
                 mWriter.write("\"/> ");
-                mWriter.write(Integer.toString(function.getPassCount()));
+                mWriter.write(formatOverviewInt(function.getPassCount()));
                 mWriter.write(" <img border=\"0\" align=\"top\" src=\"");
                 mWriter.write(mPassIconUrl);
                 mWriter.write("\"/>");
@@ -489,6 +489,18 @@ public class Reporter {
         mWriter.write("\" id=\"");
         mWriter.write(id);
         mWriter.write("\"/></a>\n\n");
+    }
+    
+    private String formatOverviewInt(int i) {
+        String toReturn = Integer.toString(i);
+        if (toReturn.length() == 1) {
+            toReturn = "&nbsp;&nbsp;" + toReturn;
+        } else if (toReturn.length() == 2) {
+            toReturn = "&nbsp;" + toReturn;
+        }
+        
+        // Add an extra space to give some space
+        return "&nbsp;" + toReturn;
     }
 
     private class Info {
