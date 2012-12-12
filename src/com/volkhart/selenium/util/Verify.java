@@ -63,7 +63,7 @@ public class Verify {
         String actualText;
         expectedText = (expected == null) ? "<b>null</b>" : expected.toString();
         actualText = (actual == null) ? "<b>null</b>" : actual.toString();
-        
+
         return verifyEquals(title, "Expected Object (" + expectedText + "), actual Object ("
                 + actualText + ")", expected, actual);
     }
