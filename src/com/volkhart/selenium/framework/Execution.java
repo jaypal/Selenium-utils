@@ -37,6 +37,14 @@ public class Execution {
     private static CompletionService<Boolean> sCompletionService;
     private static List<Test.Builder> sBuilders = new ArrayList<Test.Builder>();
     private static boolean sStarted = false;
+    
+    private Execution() {
+        
+    }
+    
+    public static Execution getInstance() {
+        
+    }
 
     public static void start() {
         setUp();
@@ -74,6 +82,10 @@ public class Execution {
         sExecutor = Executors.newCachedThreadPool();
         sCompletionService = new ExecutorCompletionService<Boolean>(sExecutor);
 
+    }
+    
+    private static class InnerExecution {
+        private Execution EXECUTOR
     }
 
 }
