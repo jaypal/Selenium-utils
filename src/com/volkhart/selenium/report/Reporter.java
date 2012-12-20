@@ -93,6 +93,7 @@ public class Reporter {
         formatOutputPath();
         Screenshot.get().generateReport(mOutputPath);
         mOutput = new File(mOutputPath + ".html");
+        mOutput.createNewFile();
         mWriter = new BufferedWriter(new FileWriter(mOutput));
 
         mErrorIconUrl = addLocalResources(Reporter.class.getResource("error.png"));
